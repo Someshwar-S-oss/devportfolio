@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 10 10 10;
+    --foreground: 237 237 237;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Markdown Content Styles */
+.prose {
+  @apply text-foreground;
+}
+
+.prose pre {
+  @apply bg-border text-foreground;
+}
+
+.prose code {
+  @apply text-accent;
+}
+
+.prose pre code {
+  @apply text-foreground;
+}
